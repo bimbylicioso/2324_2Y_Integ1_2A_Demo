@@ -5,41 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2324_2Y_Integ1_2A_Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Calculator" Height="450" Width="350">
     <Grid>
-        <Button x:Name="btn9" Content="X" HorizontalAlignment="Left" Margin="28,78,0,0" VerticalAlignment="Top" 
-        Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn9_Click"/>
-        <Button x:Name="btn8" Content="X" HorizontalAlignment="Left" Margin="83,78,0,0" VerticalAlignment="Top" 
-        Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn8_Click"/>
-        <Button x:Name="btn7" Content="X" HorizontalAlignment="Left" Margin="138,78,0,0" VerticalAlignment="Top" 
-        Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn7_Click"/>
-        <Button x:Name="btn6" Content="X" HorizontalAlignment="Left" Margin="28,133,0,0" VerticalAlignment="Top" 
-        Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn6_Click"/>
-        <Button x:Name="btn5" Content="X" HorizontalAlignment="Left" Margin="83,133,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn5_Click"/>
-        <Button x:Name="btn4" Content="X" HorizontalAlignment="Left" Margin="138,133,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn4_Click"/>
-        <Button x:Name="btn3" Content="X" HorizontalAlignment="Left" Margin="28,188,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn3_Click"/>
-        <Button x:Name="btn2" Content="X" HorizontalAlignment="Left" Margin="83,188,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn2_Click"/>
-        <Button x:Name="btn1" Content="X" HorizontalAlignment="Left" Margin="138,188,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn1_Click"/>
-        <Button x:Name="btn0" Content="X" HorizontalAlignment="Left" Margin="83,243,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btn0_Click"/>
-        <Button x:Name="btnAdd" Content="X" HorizontalAlignment="Left" Margin="193,78,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnAdd_Click"/>
-        <Button x:Name="btnMin" Content="X" HorizontalAlignment="Left" Margin="193,133,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnMin_Click"/>
-        <Button x:Name="btnMult" Content="X" HorizontalAlignment="Left" Margin="193,188,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnMult_Click"/>
-        <Button x:Name="btnDiv" Content="X" HorizontalAlignment="Left" Margin="193,243,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnDiv_Click"/>
-        <Button x:Name="btnEnter" Content="X" HorizontalAlignment="Left" Margin="138,243,0,0" VerticalAlignment="Top" 
-            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnEnter_Click"/>
-        <TextBox x:Name="tbCalc" HorizontalAlignment="Left" Margin="28,22,0,0" TextWrapping="Wrap" Text="" 
-                 VerticalAlignment="Top" Width="215" FontSize="28" IsEnabled="False" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="tbCalc" HorizontalAlignment="Stretch" Margin="10,10,10,10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="28" IsEnabled="False" HorizontalContentAlignment="Right"/>
 
+        <Grid Margin="10,70,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
 
+            <Button x:Name="btnClear" Content="C" Grid.Column="0" Grid.Row="0" FontSize="20" FontWeight="Bold" Click="btnClear_Click"/>
+            <Button x:Name="btnBackspace" Content="⌫" Grid.Column="1" Grid.Row="0" FontSize="20" FontWeight="Bold" Click="btnBackspace_Click"/>
+            <Button x:Name="btnDiv" Content="/" Grid.Column="2" Grid.Row="0" FontSize="20" FontWeight="Bold" Click="btnDiv_Click"/>
+            <Button x:Name="btnMult" Content="*" Grid.Column="3" Grid.Row="0" FontSize="20" FontWeight="Bold" Click="btnMult_Click"/>
+
+            <Button x:Name="btn7" Content="7" Grid.Column="0" Grid.Row="1" FontSize="20" FontWeight="Bold" Click="btn7_Click"/>
+            <Button x:Name="btn8" Content="8" Grid.Column="1" Grid.Row="1" FontSize="20" FontWeight="Bold" Click="btn8_Click"/>
+            <Button x:Name="btn9" Content="9" Grid.Column="2" Grid.Row="1" FontSize="20" FontWeight="Bold" Click="btn9_Click"/>
+            <Button x:Name="btnMin" Content="-" Grid.Column="3" Grid.Row="1" FontSize="20" FontWeight="Bold" Click="btnMin_Click"/>
+
+            <Button x:Name="btn4" Content="4" Grid.Column="0" Grid.Row="2" FontSize="20" FontWeight="Bold" Click="btn4_Click"/>
+            <Button x:Name="btn5" Content="5" Grid.Column="1" Grid.Row="2" FontSize="20" FontWeight="Bold" Click="btn5_Click"/>
+            <Button x:Name="btn6" Content="6" Grid.Column="2" Grid.Row="2" FontSize="20" FontWeight="Bold" Click="btn6_Click"/>
+            <Button x:Name="btnAdd" Content="+" Grid.Column="3" Grid.Row="2" FontSize="20" FontWeight="Bold" Click="btnAdd_Click"/>
+
+            <Button x:Name="btn1" Content="1" Grid.Column="0" Grid.Row="3" FontSize="20" FontWeight="Bold" Click="btn1_Click"/>
+            <Button x:Name="btn2" Content="2" Grid.Column="1" Grid.Row="3" FontSize="20" FontWeight="Bold" Click="btn2_Click"/>
+            <Button x:Name="btn3" Content="3" Grid.Column="2" Grid.Row="3" FontSize="20" FontWeight="Bold" Click="btn3_Click"/>
+            <Button x:Name="btnEnter" Content="=" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" FontSize="20" FontWeight="Bold" Click="btnEnter_Click"/>
+
+            <Button x:Name="btn0" Content="0" Grid.Column="0" Grid.Row="4" FontSize="20" FontWeight="Bold" Click="btn0_Click"/>
+            <Button x:Name="btnDot" Content="." Grid.Column="1" Grid.Row="4" FontSize="20" FontWeight="Bold" Click="btnDot_Click"/>
+        </Grid>
     </Grid>
 </Window>
